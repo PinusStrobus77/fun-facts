@@ -11,3 +11,64 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-right: 16px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  display: block;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #606060;
+  text-decoration: none;
+  height: 56px;
+  line-height: 56px;
+}
+
+nav a:hover {
+  color: #202020;
+}
+
+body {
+  background-image: url('./Brody-Best-of-Thelonious-Monk.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+p {
+  border: 1px solid #000;
+  padding: 10px;
+  background-color: #fff;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 500;
+  text-transform: uppercase;
+  
+  text-align: center;
+  margin-top: 30px;
+}

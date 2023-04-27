@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import Fact1 from './Components/Fact1';
+import Fact2 from './Components/Fact2';
+import Fact3 from './Components/Fact3';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/Fact1">Fun Fact 1</Link>
+            </li>
+            <li>
+              <Link to="/Fact2">Fun Fact 2</Link>
+            </li>
+            <li>
+              <Link to="/Fact3">Fun Fact 3</Link>
+            </li>
+           
+          </ul>
+        </nav>
+
+        <Switch>
+          <Route path="/Fact1" component={Fact1}>
+            <Fact1 />
+          </Route>
+          <Route path="/Fact2" component={Fact2}>
+            <Fact2 />
+          </Route>
+          <Route path="/Fact3" component={Fact3}>
+            <Fact3 />
+          </Route>
+
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
